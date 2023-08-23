@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/default.css">
+    <style>
+        body {
+            background-image: url('images/main_bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+    <title>Orders</title>
+</head>
+<body class="d-flex align-items-center justify-content-center">
+
+    <!-- Card: Add Order Form Card -->
+    <div class="card add-order-form-card col-6 bg-transparent border-0">
+        <!-- Card Body -->
+        <div class="card-body">
+            <!-- Form Header -->
+            <h1 class="form-header card-title mb-3">
+                <i class="fa fa-plus"></i> Add Order
+            </h1>
+            <!-- End Of Form Header -->
+
+            <!-- Add Order Form -->
+            <form  class="add-order-form">
+                <!-- Form Group -->
+                <div class="form-group col">
+                    <input type="number" name="sub_total" class="form-control form-control-lg" placeholder="Enter Sub Total" required/>
+                </div>
+                <!-- End Of Form Group -->
+
+                <!-- Form Group -->
+                <div class="form-group col">
+                    <input type="text" name="phone_number" class="form-control form-control-lg" placeholder="Enter Phone number" required/>
+                </div>
+                <!-- End Of Form Group -->
+
+                <!-- Form Group -->
+                <div class="form-group col">
+                    <button class="btn btn-lg">Add Order</button>
+                </div>
+                <!-- End Of Form Group -->
+
+            </form>
+            <!-- End Of Add Order Form -->
+
+            <!-- Card Text -->
+            <p class="card-text text-white my-2">
+                <a href="viewAllOrders.html" class="btn bt-sm text-warning">View All Orders</a>
+            </p>
+            <!-- Card Text -->
+
+            <!-- Back Button To Dashboard -->
+            <small class="text-warning">
+                <i class="fa fa-arrow-alt-circle-left"></i> <a href="/" class="btn btn-sm text-warning">Logout</a>
+            </small>
+            <!-- End Of Back Button To Dashboard -->
+
+        </div>
+        <!-- End Of Card Body -->
+    </div>
+    <!-- Card: Add Order Form Card -->
+
+    <script>
+        // Check if user is authenticated
+        if (!localStorage.getItem('token')) {
+            // Redirect to login page
+            alert("You Are Not Authorized , Login First !");
+            window.location.href = 'api/login';
+        }
+    </script>
+
+<script src="scripts/scriptForOrder.js"></script>
+
+</body>
+</html>

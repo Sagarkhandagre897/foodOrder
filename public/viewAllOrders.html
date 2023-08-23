@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/default.css">
+    <style>
+        body {
+            background-image: url('images/main_bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+    <title>All Orders</title>
+</head>
+<body class="d-flex align-items-center justify-content-center">
+
+    <!-- Card: All Orders Card -->
+    <div class="card all-orders-card col-8 bg-transparent border-0">
+        <!-- Card Body -->
+        <div class="card-body">
+            <!-- Form Header -->
+            <h1 class="form-header card-title mb-3">
+                <i class="fa fa-list"></i> All Orders
+            </h1>
+            <!-- End Of Form Header -->
+
+            <!-- Table to display all orders -->
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Sub Total</th>
+                        <th>Phone Number</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="orders-list">
+                    <!-- Orders will be dynamically added here -->
+                </tbody>
+            </table>
+
+            <!-- Back Button To Dashboard -->
+            <p class="text-center mt-3">
+                <a href="api/" class="btn btn-lg btn-warning">Logout</a>
+            </p>
+            <!-- End Of Back Button To Dashboard -->
+
+             <!-- Back Button To Landing Page -->
+             <small class="text-warning">
+                <i class="fa fa-arrow-alt-circle-left"></i> <a href="orders.html" class="btn btn-sm text-warning">Back</a>
+            </small>
+            <!-- End Of Back Button To Landing Page -->
+
+        </div>
+        <!-- End Of Card Body -->
+    </div>
+    <!-- Card: All Orders Card -->
+
+    <script>
+        // Check if user is authenticated
+        if (!localStorage.getItem('token')) {
+            // Redirect to login page
+            alert("You Are Not Authorized , Login First !");
+            window.location.href = 'api/login';
+        }
+    </script>
+
+    <script src="scriptForAllOrder.js"></script>
+
+</body>
+</html>

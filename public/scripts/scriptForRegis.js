@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     window.location.href = "api/login"; // Redirect to login page
                 } else {
                     // Handle registration error
-                    alert("Registration failed. Please try again.");
+                     alert("Registration failed mobile number is already register  , Please try again.");
                 }
             } catch (error) {
                 console.error("An error occurred:", error);

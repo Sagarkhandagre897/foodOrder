@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000/api'; 
+const baseUrl = 'https://foodorder-hd9r.onrender.com/api'; 
 
 // Function to add a new order
 document.addEventListener("DOMContentLoaded", function () {

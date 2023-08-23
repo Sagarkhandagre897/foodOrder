@@ -48,8 +48,4 @@ document.addEventListener("DOMContentLoaded", async function () {
 });
 
 
-// Update the order details on the frontend
-function updateOrderDetails(details) {
-    const orderDetailsElem = document.getElementById('orderDetails');
-    orderDetailsElem.textContent = JSON.stringify(details, null, 2);
-}
+
